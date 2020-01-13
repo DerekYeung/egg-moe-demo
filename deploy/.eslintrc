@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    "linebreak-style": "off",
+    "eqeqeq": "off"
+  }
+}

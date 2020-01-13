@@ -1,0 +1,54 @@
+{
+  "name": "demo-passport",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "egg": "^2.10.0",
+    "egg-moe": "^1.0.37",
+    "egg-scripts": "^2.9.1"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.8.3",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.20.0",
+    "egg-moe-builder": "^1.0.21",
+    "eslint": "^5.4.0",
+    "eslint-config-egg": "^7.1.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "build": "egg-moe-builder --build",
+    "start": "egg-scripts start --daemon --title=egg-server-demo-passport",
+    "stop": "egg-scripts stop --title=egg-server-demo-passport",
+    "dev": "egg-bin dev",
+    "moe": "set DEBUG=moe*,-not_this && npm run dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "egg": {
+    "framework": "egg-moe"
+  },
+  "moe": {
+    "common": "../common"
+  },
+  "author": "DerekYeung",
+  "license": "MIT"
+}

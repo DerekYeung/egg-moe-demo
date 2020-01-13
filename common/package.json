@@ -1,0 +1,28 @@
+{
+  "name": "moe-common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alicloud/sms-sdk": "^1.1.6",
+    "egg-moe": "^1.0.59",
+    "egg-moe-payment": "^1.0.28",
+    "getui-rest": "^0.4.7",
+    "moe-base": "^1.0.17",
+    "moe-getui": "^1.0.16",
+    "moe-query": "^1.0.50",
+    "sha1": "^1.1.1",
+    "soap": "^0.25.0",
+    "wechat-api": "^1.35.1",
+    "wechat-oauth": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^7.5.1"
+  }
+}

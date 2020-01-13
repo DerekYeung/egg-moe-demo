@@ -1,0 +1,55 @@
+{
+  "name": "demo-backend",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "egg": "^2.23.0",
+    "egg-moe": "^1.0.59",
+    "egg-moe-cache": "^1.0.2",
+    "egg-scripts": "^2.11.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.13.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^4.11.0",
+    "egg-moe-builder": "^1.0.21",
+    "eslint-config-egg": "^6.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "build": "egg-moe-builder --build",
+    "start": "egg-scripts start --daemon --title=egg-server-demo-backend",
+    "stop": "egg-scripts stop --title=egg-server-ews-demo-backend",
+    "dev": "egg-bin dev",
+    "moe": "set DEBUG=moe*,-not_this && npm run dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "egg": {
+    "framework": "egg-moe"
+  },
+  "moe": {
+    "common": "../common"
+  },
+  "author": "DerekYeung",
+  "license": "MIT"
+}

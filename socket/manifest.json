@@ -1,0 +1,576 @@
+{
+	"@platforms": ["android", "iPhone"],
+	"id": "com.ewsedu.eteacher",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "学拓帮·教师版",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "2.0.6",/*应用版本名称*/
+		"code": ""
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "start.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "DerekYeung",/*开发者名称*/
+		"email": "466836531@qq.com",/*开发者邮箱地址*/
+		"url": "http://supx.me"
+	},
+	"unpackage": [
+		"src"
+	],
+	"permissions": {
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {},"Push":{},"Share":{},"OAuth":{},"Payment":{},"Fingerprint":{},"LivePusher":{},"VideoPlayer":{}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": false
+		},
+		"statusbar": {
+			"immersed": true
+		},
+		"useragent": {
+			"value": "ewsedu eteacher ews-next",
+			"concatenate": true
+		},
+		"popGesture": "hide",/*设置应用默认侧滑返回关闭Webview窗口，none为无侧滑返回功能，hide为侧滑隐藏Webview窗口。参考ask.dcloud.net.cn/article/102*/
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {"plugins":{"push":{"igexin":{"appid":"7UVVxTl3eJ8uyDT85M2HG9","appkey":"GTbSTcUMBa5wCl64H4UoE","appsecret":"wiDkPEAU1O9WEKLgO8JJx3"}},"share":{"weixin":{"appid":"wx63c87d6a5e4ad83f","appsecret":"a4f6d5cddcea6bf0a6aa3099b2860ca0","description":"可选，微信分享"}},"payment":{"weixin":{"description":"微信支付","appid":"wx63c87d6a5e4ad83f"},"alipay":{"description":"阿里支付","scheme":""}},"oauth":{"weixin":{"appid":"wx63c87d6a5e4ad83f","appsecret":"a4f6d5cddcea6bf0a6aa3099b2860ca0"}},"maps":{"baidu":{"appkey_ios":"Nm3qtFzygersexLm66WmOBRHnc2rn6zG","appkey_android":"ce42ZjSGUo4cfWf33f33Be0KW2Wp7TmW","appkey":"","description":""}}},
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"urltypes": [
+					{
+						"urlidentifier":"com.ewsedu.eteacher",
+						"urlschemes": [
+							"eteacher"
+						]
+					}
+				],
+				"frameworks": [],
+				"plistcmds": [
+					"Set :NSMicrophoneUsageDescription 我们将使用您的麦克风为您提供拍语音录制服务",
+					"Set :NSPhotoLibraryUsageDescription 我们将读取您的相册为您提供拍照上传图片服务",
+					"Set :NSCameraUsageDescription 我们将使用您的相机为您提供拍照上传图片服务",
+					"Set :NSPhotoLibraryAddUsageDescription 我们将保存图片到您的相册",
+					"Set :NSLocationAlwaysUsageDescription 我们将获取您的定位信息用于导航或路径规划",
+					"Set :NSLocationWhenInUseUsageDescription 我们将获取您的定位信息用于签到定位",
+					"Set :NSLocationAlwaysAndWhenInUseUsageDescription 我们将获取您的定位信息用于签到定位或导航"
+				]
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"schemes": [
+					"eteacher"
+				],
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission  android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.INTERNET\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.USE_FINGERPRINT\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+			},
+			"orientation": ["portrait-primary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					 /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
+						/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"app@2x":"unpackage/res/icons/120x120.png","app@3x":"unpackage/res/icons/180x180.png","settings@3x":"unpackage/res/icons/87x87.png","settings@2x":"unpackage/res/icons/58x58.png","spotlight@2x":"unpackage/res/icons/80x80.png","spotlight@3x":"unpackage/res/icons/120x120.png","notification@3x":"unpackage/res/icons/60x60.png","notification@2x":"unpackage/res/icons/40x40.png"
+					},
+					"ipad": {
+						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+						 /*iPad iOS7程序图标，分辨率：76x76*/
+						 /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						/*iPad设置页面程序图标，分辨率：29x29*/
+						"app":"unpackage/res/icons/76x76.png","app@2x":"unpackage/res/icons/152x152.png","settings":"unpackage/res/icons/29x29.png","proapp@2x":"unpackage/res/icons/167x167.png","spotlight":"unpackage/res/icons/40x40.png","settings@2x":"unpackage/res/icons/58x58.png","spotlight@2x":"unpackage/res/icons/80x80.png","notification":"unpackage/res/icons/20x20.png","notification@2x":"unpackage/res/icons/40x40.png"
+					},"appstore":"unpackage/res/icons/1024x1024.png"
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png","xxxhdpi":"unpackage/res/icons/192x192.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "unpackage/res/splash/640x960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "unpackage/res/splash/640x1136.png",
+						"iphonex": "unpackage/res/splash/1125x2436.png",
+						"retina47": "unpackage/res/splash/750x1334.png",
+						"retina55": "unpackage/res/splash/1242x2208.png"
+					},
+					"ipad": {
+						"portrait": "unpackage/res/splash/768x1004.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "unpackage/res/splash/1536x2008.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "unpackage/res/splash/768x1024.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "unpackage/res/splash/480x762.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "unpackage/res/splash/720x1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "unpackage/res/splash/1080x1882.png"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"home.html",
+					"js/mui.js",
+					"js/build/vendor.bundle.js",
+					"js/build/index.js",
+					"static/loginBg.jpg",
+					"static/logo.png",
+					"static/logoTitle.png"
+				],
+				"refer": [
+					"home.html"
+				],
+				"priority": 0
+			},
+			"home.html": {
+				"href": "home.html",
+				"resources": [
+					"js/mui.js",
+					"js/build/vendor.bundle.js",
+					"js/build/plus.js",
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"static/icon/home/message.svg",
+					"static/icon/home/message-active.svg",
+					"static/icon/home/contact.svg",
+					"static/icon/home/contact-active.svg",
+					"static/icon/home/application.svg",
+					"static/icon/home/application-active.svg",
+					"static/icon/home/my.svg",
+					"static/icon/home/my-active.svg"
+				],
+				"priority": 0
+			},
+			"start.html": {
+				"resources": [
+					"home.html",
+					"js/mui.js",
+					"js/build/vendor.bundle.js",
+					"js/build/index.js",
+					"static/launchBg.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"src/test/e2e/runner.js",
+				"src/src/assets/image/module/zhangdan.png",
+				"src/src/assets/image/module/homework.png",
+				"src/src/assets/image/fileIcon/docx.png",
+				"src/src/components/view/content.vue",
+				"src/src/pages/user/page/identity.vue",
+				"src/app/home.js",
+				"src/app/plus.js",
+				"src/src/assets/image/module/classes/attendance.png",
+				"src/src/assets/image/fileIcon/jepg.png",
+				"src/src/assets/image/module/classes/visit.png",
+				"src/src/pages/common/share/create.vue",
+				"src/src/pages/module/homework/item.vue",
+				"src/src/assets/image/module/kebiao.png",
+				"package.json",
+				"src/src/pages/user/page/account.vue",
+				"src/src/pages/module/mind/index.vue",
+				"src/src/pages/module/classes/index.vue",
+				"src/src/components/Star.vue",
+				"dist/static/js/22.2c0f19017f54972fdd7a.js",
+				"src/src/assets/image/imagePlaceholder.png",
+				"src/src/assets/image/fileIcon/xlsx.png",
+				"src/src/assets/image/logo.png",
+				"src/src/assets/image/module/classes_sign.png",
+				"src/src/pages/user/auth/connect.vue",
+				"src/build/logo.png",
+				"src/src/assets/image/module/message.png",
+				"src/src/components/form/selector.vue",
+				"src/src/components/Btn.vue",
+				"src/src/pages/module/classes/teacher.vue",
+				"src/src/assets/iconfont/iconfont.woff",
+				"src/src/pages/user/auth/fingerprint.vue",
+				"src/src/assets/image/banner/money.png",
+				"dist/static/fonts/iconfont.41fe365.eot",
+				"src/src/pages/user/page/invite.vue",
+				"src/src/pages/module/bill/card.vue",
+				"dist/static/js/18.ffa2e6fe7483a90e4428.js",
+				"dist/static/js/21.fd85715d336d94b82f29.js",
+				"src/src/pages/module/bill/list.vue",
+				"src/src/pages/common/attach/item.vue",
+				"dist/static/img/1.d75759a.jpg",
+				"src/src/pages/module/office/approvalRepair.vue",
+				"src/src/pages/user/developer/account.vue",
+				"src/src/pages/chat/message/index.vue",
+				"dist/static/img/default.bd58853.png",
+				"src/src/assets/image/fileIcon/mp3.png",
+				"src/src/components/ArticleContent.vue",
+				"src/src/router/pages.js",
+				"src/src/pages/common/target/item.vue",
+				"src/src/pages/module/activity/index.vue",
+				"dist/static/js/4.503b0934bb16f1dbbe4c.js",
+				"src/src/components/Panel.vue",
+				"src/build/utils.js",
+				"src/src/pages/module/mind/list.vue",
+				"src/src/components/helper/margin-block.vue",
+				"src/src/components/DropdownMenu.vue",
+				"dist/static/js/11.77e47d4856487c0b8496.js",
+				"src/src/components/Identity.vue",
+				"src/app/helper.js",
+				"src/app/build.js",
+				"src/src/store/getter.js",
+				"src/src/components/card/footer.vue",
+				"src/src/pages/common/share/index.vue",
+				"src/src/components/form/picker-datetime.vue",
+				"dist/static/img/logoTitle.5985d81.png",
+				"src/src/components/CommentTool.vue",
+				"src/src/assets/image/fileIcon/gif.png",
+				"src/src/pages/module/notify/item.vue",
+				"src/README.md",
+				"dist/static/js/27.c58536b07576eb823aab.js",
+				"src/src/pages/module/comment/index.vue",
+				"dist/static/css/app.8a792a26c2461c2ec0a974343887650c.css",
+				"src/src/assets/image/bgCloud.png",
+				"src/src/assets/image/fileIcon/none.png",
+				"dist/static/js/17.41f9db5d350a7e51cca4.js",
+				"src/src/components/Avatar.vue",
+				"src/src/components/form/tool.vue",
+				"dist/static/img/mark.3e4adea.png",
+				"dist/static/js/7.e376bb6926a9cc0f5ca0.js",
+				"dist/static/js/19.cd442009d93465207780.js",
+				"src/src/pages/module/notify/list.vue",
+				"dist/static/img/money.249f1e0.png",
+				"src/src/assets/image/banner/office.png",
+				"src/src/components/UserBoard.vue",
+				"src/src/components/view/pull-refresh.vue",
+				"dist/static/js/29.ff85f9a1517e0cd6abf4.js",
+				"src/src/components/helper/divider.vue",
+				"src/src/assets/image/top3.png",
+				"dist/static/img/imagePlaceholder.88618a6.png",
+				"src/src/App.vue",
+				"src/src/components/loader.vue",
+				"dist/static/js/8.1ca0883d391a8b1b48d5.js",
+				"src/src/pages/tool/qrcode/scaner.vue",
+				"src/src/components/Tab.vue",
+				"src/src/pages/module/homework/list.vue",
+				"src/src/assets/image/module/notify.png",
+				"src/src/assets/image/module/leave.png",
+				"src/src/components/helper/placeholder.vue",
+				"src/config/app.build.js",
+				"src/src/assets/image/banner/work.png",
+				"src/src/components/skeleton/content.vue",
+				"src/src/components/Tip.vue",
+				"src/src/pages/module/notify/index.vue",
+				"src/src/assets/image/module/office.png",
+				"src/src/components/card/content.vue",
+				"src/src/assets/image/poster/edition1.jpg",
+				"src/test/unit/setup.js",
+				"src/src/pages/user/page/order.vue",
+				"src/src/assets/image/logoStudent.png",
+				"src/src/assets/image/module/xin.png",
+				"src/src/pages/module/mark/item.vue",
+				"dist/static/img/none.054f81f.png",
+				"src/src/assets/image/fileIcon/pdf.png",
+				"src/src/components/form/receiver.vue",
+				"src/src/assets/image/module/office/matter.png",
+				"dist/static/img/leave.d58138d.png",
+				"src/src/components/CommentBox.vue",
+				"src/src/pages/common/welcome/index.vue",
+				"src/config/db/student.js",
+				"src/src/assets/image/module/classes/student.png",
+				"src/src/pages/module/office/approvalLeaveItem.vue",
+				"src/src/components/form/content.vue",
+				"dist/static/img/classes_score.5d0dfb6.png",
+				"src/src/assets/image/fileIcon/ppt.png",
+				"src/build/webpack.base.conf.js",
+				"src/src/assets/image/module/office/attendance.png",
+				"src/src/pages/module/bill/index.vue",
+				"src/src/pages/module/activity/card.vue",
+				"src/src/pages/common/monitor/index.vue",
+				"src/app/version.js",
+				"src/src/pages/module/office/approvalRepairItem.vue",
+				"dist/static/fonts/iconfont.4c7455b.ttf",
+				"src/src/assets/image/fileIcon/doc.png",
+				"src/src/assets/image/module/office/classManagement.png",
+				"src/test/unit/jest.conf.js",
+				"dist/static/img/approval.3917c2d.png",
+				"src/src/pages/common/comment/index.vue",
+				"src/src/assets/image/module/monitor.png",
+				"src/src/pages/module/office/approvalLeave.vue",
+				"src/src/components/xBiscuit.vue",
+				"dist/static/js/20.9bddb0b90dc9be3d460c.js",
+				"src/src/assets/image/fileIcon/jpg.png",
+				"dist/static/js/15.75a1cccdb49a4fc8d36e.js",
+				"src/build/webpack.dev.conf.js",
+				"src/src/components/SideBar.vue",
+				"src/src/assets/image/qrcode/teacher.png",
+				"src/config/test.env.js",
+				"src/src/pages/chat/contact/otherInfo.vue",
+				"src/src/assets/image/logoTeacher.png",
+				"src/src/pages/module/attendance/list.vue",
+				"dist/static/js/vendor.75d9a50b6738b59984ef.js",
+				"src/config/dev.env.js",
+				"src/src/pages/module/office/approvalIndex.vue",
+				"src/build/check-versions.js",
+				"src/src/assets/image/qrcode/student.png",
+				"src/src/assets/image/module/classes.png",
+				"dist/static/img/monitor.f8f3fd0.png",
+				"src/src/components/Collapsible.vue",
+				"src/src/components/view/scroll.vue",
+				"dist/static/img/office.43bae7d.png",
+				"src/src/pages/module/office/salary.vue",
+				"src/src/components/ImageGallery.vue",
+				"src/src/pages/module/activity/item.vue",
+				"src/src/components/AttachGallery.vue",
+				"dist/static/js/24.c8acdc6cd52116cabc44.js",
+				"src/src/components/form/input.vue",
+				"src/src/pages/chat/message/item.vue",
+				"src/src/pages/module/activity/create.vue",
+				"src/src/store/index.js",
+				"dist/static/img/class.139ecfc.png",
+				"src/src/assets/image/module/classes/mark.png",
+				"src/config/db/index.js",
+				"src/test/e2e/nightwatch.conf.js",
+				"src/src/components/skeleton/list.vue",
+				"src/build/vue-loader.conf.js",
+				"src/src/pages/user/page/about.vue",
+				"src/src/assets/iconfont/iconfont.eot",
+				"src/src/components/Fingerprint.vue",
+				"src/src/components/Card.vue",
+				"dist/static/img/team.127ee61.png",
+				"src/src/assets/image/module/boshimao-copy.png",
+				"dist/static/js/32.6e105ce1fac4eee4389d.js",
+				"src/src/assets/iconfont/iconfont.svg",
+				"src/src/store/mutations.js",
+				"src/src/assets/image/welcome/1.jpg",
+				"src/src/assets/image/fileIcon/png.png",
+				"src/src/components/ProgressBar.vue",
+				"src/src/pages/module/classes/class.vue",
+				"src/src/pages/user/page/nickname.vue",
+				"src/src/pages/webloader/browser/index.vue",
+				"src/src/components/view/header.vue",
+				"src/src/pages/module/activity/show.vue",
+				"dist/static/js/25.acbd84143f7cf92b5b82.js",
+				"src/app/main.js",
+				"src/src/pages/module/classes/visit.vue",
+				"dist/static/js/16.12d53b244d086852cab1.js",
+				"dist/static/img/login-bg.62a5366.png",
+				"src/src/components/Date.vue",
+				"src/src/assets/image/fileIcon/excel.png",
+				"dist/static/js/30.ea959a4e9c19a619b2b6.js",
+				"src/src/assets/image/avatar/maleTeacher.png",
+				"dist/static/js/10.3411c340be1a25f6c436.js",
+				"dist/static/img/logo.612f6de.png",
+				"src/src/pages/common/status/error.vue",
+				"src/src/pages/module/activity/rank.vue",
+				"src/src/pages/user/developer/index.vue",
+				"src/src/components/card/section.vue",
+				"src/src/assets/image/module/classes/leave.png",
+				"src/src/main.js",
+				"src/src/components/List.vue",
+				"src/build/webpack.prod.conf.js",
+				"src/src/components/SwitchCell.vue",
+				"src/src/assets/image/fileIcon/mp4.png",
+				"dist/static/img/work.b2f55bc.png",
+				"src/src/pages/chat/contact/search.vue",
+				"src/config/prod.env.js",
+				"dist/static/js/6.8293fb8bb0b189576501.js",
+				"src/src/assets/image/fileIcon/word.png",
+				"src/src/components/GridBox.vue",
+				"src/src/router/index.js",
+				"src/src/assets/image/top1.png",
+				"dist/static/js/31.d157597735197717304d.js",
+				"dist/static/img/iconfont.692b277.svg",
+				"src/src/components/view/header-user.vue",
+				"src/src/pages/user/page/telephone.vue",
+				"src/src/pages/chat/contact/index.vue",
+				"src/src/pages/module/attendance/index.vue",
+				"dist/static/js/12.c50de56f1513d41f21e7.js",
+				"src/src/components/form/voice-record.vue",
+				"src/src/pages/module/comment/list.vue",
+				"src/src/assets/image/module/interaction.png",
+				"src/src/components/ModuleBox.vue",
+				"src/src/pages/module/comment/item.vue",
+				"src/config/app.js",
+				"src/src/pages/user/setting/password.vue",
+				"src/src/assets/image/avatar/girl.png",
+				"src/src/components/form/example.vue",
+				"src/src/pages/webloader/content/index.vue",
+				"src/test/e2e/specs/test.js",
+				"src/src/assets/image/module/classes_score.png",
+				"src/src/pages/common/status/dev.vue",
+				"src/src/pages/user/setting/connect.vue",
+				"dist/static/js/manifest.fa474d5c6ef87935a043.js",
+				"dist/static/img/3.470ef3a.jpg",
+				"src/src/pages/webloader/app/index.vue",
+				"src/src/pages/module/classes/student.vue",
+				"src/src/pages/user/setting/security.vue",
+				"js/mui.min.js",
+				"dist/static/img/error.e115ced.png",
+				"src/src/components/Slide.vue",
+				"src/src/components/view/loading.vue",
+				"src/src/pages/tool/qrcode/scan.vue",
+				"src/src/pages/module/notify/create.vue",
+				"src/src/pages/module/leave/item.vue",
+				"src/src/pages/user/setting/index.vue",
+				"src/src/pages/chat/setting/nickname.vue",
+				"src/src/assets/image/banner/class.png",
+				"dist/static/js/14.a80b333de1000ed777e7.js",
+				"src/src/assets/image/module/classes/timetable.png",
+				"src/src/pages/user/auth/form.vue",
+				"src/src/pages/user/developer/push.vue",
+				"src/src/components/view/header-with-avatar.vue",
+				"src/src/pages/module/homework/create.vue",
+				"src/config/dev.setting.js",
+				"src/config/index.js",
+				"src/src/assets/iconfont/iconfont.css",
+				"dist/static/js/3.81f9df223838556ff338.js",
+				"dist/static/js/26.6a20c0489fdaa1434cf9.js",
+				"js/build/home.js",
+				"src/src/assets/image/top2.png",
+				"src/config/app.dev.js",
+				"src/src/assets/image/welcome/3.jpg",
+				"src/src/components/Icon.vue",
+				"src/src/components/CellBox.vue",
+				"src/src/pages/module/timetable/index.vue",
+				"src/src/pages/module/classes/attendance.vue",
+				"src/src/assets/iconfont/iconfont.js",
+				"dist/static/js/23.9e535ced3bd5c2326aee.js",
+				"src/test/unit/specs/HelloWorld.spec.js",
+				"src/src/components/ActivityPopup.vue",
+				"dist/static/js/app.b7277a406e285d227d22.js",
+				"dist/static/img/logoTeacher.612f6de.png",
+				"src/src/components/view/loading/web.vue",
+				"src/src/components/Rank.vue",
+				"src/src/assets/image/module/check.png",
+				"src/src/store/action.js",
+				"src/src/pages/chat/contact/groupInfo.vue",
+				"src/index.html",
+				"src/src/pages/user/page/index.vue",
+				"src/src/assets/image/avatar/femaleTeacher.png",
+				"src/src/pages/module/leave/index.vue",
+				"src/src/pages/module/office/attendance.vue",
+				"src/src/assets/image/avatar/boy.png",
+				"src/src/pages/chat/contact/group.vue",
+				"src/src/components/card/header.vue",
+				"src/src/pages/module/attendance/card.vue",
+				"src/src/pages/user/setting/fingerprint.vue",
+				"src/src/components/Voice.vue",
+				"src/src/assets/image/banner/default.png",
+				"src/src/assets/iconfont/iconfont.ttf",
+				"src/src/pages/module/mind/item.vue",
+				"src/src/assets/image/module/office/salary.png",
+				"src/src/assets/image/login-bg.png",
+				"src/src/components/skeleton/index.vue",
+				"src/src/pages/module/leave/list.vue",
+				"dist/static/js/1.d83bf170c53ee1f0dd80.js",
+				"src/src/pages/module/mark/create.vue",
+				"dist/static/img/edition1.1a5f5f7.jpg",
+				"src/src/pages/chat/contact/select.vue",
+				"src/src/assets/image/logoTitle.png",
+				"src/src/assets/image/module/office/repair.png",
+				"src/src/assets/image/module/live.png",
+				"src/src/pages/module/comment/card.vue",
+				"dist/static/js/13.b7287ecb4a71106bf730.js",
+				"src/app/bridge.js",
+				"src/src/assets/image/module/chengjidan.png",
+				"src/build/build.js",
+				"src/src/components/Pic.vue",
+				"src/src/pages/module/office/index.vue",
+				"src/src/assets/image/fileIcon/xls.png",
+				"src/app/webpack.config.js",
+				"src/src/assets/image/error.png",
+				"src/src/components/skeleton/comment-box.vue",
+				"src/src/pages/user/setting/image.vue",
+				"src/src/components/skeleton/card.vue",
+				"src/src/assets/image/avatar/default.png",
+				"src/src/pages/chat/contact/list.vue",
+				"dist/static/img/classes.087aae7.png",
+				"src/src/Tip.vue",
+				"dist/static/js/5.d25320408ba7d129e112.js",
+				"src/src/pages/common/update/index.vue",
+				"src/src/assets/image/welcome/2.jpg",
+				"src/src/pages/module/mark/index.vue",
+				"dist/static/img/2.59707dc.jpg",
+				"src/src/pages/common/target/index.vue",
+				"src/package.json",
+				"dist/index.html",
+				"src/src/assets/image/banner/approval.png",
+				"src/test/e2e/custom-assertions/elementCount.js",
+				"src/src/pages/module/homework/index.vue",
+				"src/src/pages/user/auth/index.vue",
+				"src/app/config.js",
+				"dist/static/js/9.fd14565c1bd7f6a4fecf.js",
+				"src/src/assets/image/tip/mobile.png",
+				"src/src/assets/image/module/dev.png",
+				"src/src/assets/image/module/office/approval.png",
+				"src/src/assets/image/banner/team.png",
+				"src/build/map.js",
+				"src/src/pages/chat/setting/groupName.vue",
+				"dist/static/js/2.5088bc5e279b25c5451d.js",
+				"src/src/assets/image/module/office/leave.png",
+				"src/src/components/skeleton/block.vue",
+				"src/src/pages/chat/contact/members.vue",
+				"src/src/pages/module/classes/timetable.vue",
+				"js/build/bridge.js",
+				"src/src/pages/module/index/index.vue",
+				"src/src/assets/image/fileIcon/mov.png",
+				"src/src/assets/css/global.scss",
+				"dist/static/js/0.ba6be03665ed7f2c63ea.js",
+				"src/src/components/Biscuit.vue",
+				"src/app/index.js",
+				"src/src/components/Captcha.vue",
+				"src/src/pages/module/mind/create.vue",
+				"src/src/assets/image/tip/none.png",
+				"dist/static/js/28.6ae4b96aa08099b4579c.js"
+			]
+		}
+	}
+}

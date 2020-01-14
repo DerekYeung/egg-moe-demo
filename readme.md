@@ -14,3 +14,14 @@ backend: 后台相关接口
 deploy: 通用部署接口
 
 ps: 在真实开发环境下，common以及不同的项目均为独立的git仓库，除common外，不同的开发人员拥有不同的项目权限，保证了互相之间不会产生冲突以及部分代码安全性问题
+
+# 相关库
+egg-database
+egg-moe-cache
+egg-moe-request
+egg-moe-payment
+egg-moe-builder
+moe-base
+moe-query
+moe-excel
+moe-validate
